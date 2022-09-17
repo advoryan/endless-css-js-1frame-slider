@@ -1,0 +1,62 @@
+// @import 'reset';
+
+.carousel {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__main-frame {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__frames-wrapper {
+        animation-duration: 1s;
+        width: 20rem;
+        height: 20rem;
+        display: flex;
+        position: relative;
+        z-index: -1;
+        right: 20rem;
+     }
+    &__frame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        min-width: 20rem;
+        min-height: 20rem;
+    }
+    &__btn {
+        height: 5rem;
+        width: 5rem;
+        outline: 1px red solid;
+        background-color: aqua;
+    }
+}
+
+.slide-left {
+    animation-name: slide-left;
+}
+.slide-right {
+    animation-name: slide-right;
+}
+
+@keyframes slide-right {
+ from {
+    right: 20rem;
+    }
+ to {
+    right: 40rem;
+    }   
+}
+
+@keyframes slide-left {
+    from {
+       right: 20rem;
+    }
+    to {
+       right: 0rem;
+    }   
+}
